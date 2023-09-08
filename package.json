@@ -1,8 +1,8 @@
 {
   "name": "@indooorsman/typescript-eslint",
-  "version": "6.6.1",
+  "version": "6.6.2",
   "description": "This is a bundled esm pacakge of `@typescript-eslint/eslint-plugin` & `@typescript-eslint/parser`, it's super fast to be resolved & downloaded ⚡️⚡️⚡️",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -12,12 +12,17 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
       "default": "./dist/index.js"
     },
-    "./parser": "./dist/parser.js",
-    "./parser.js": "./dist/parser.js",
-    "./dist/*": "./dist/*.js",
-    "./dist/*.js": "./dist/*.js"
+    "./parser": {
+      "require": "./dist/parser.cjs",
+      "default": "./dist/parser.js"
+    },
+    "./dist/*": {
+      "require": "./dist/*.cjs",
+      "default": "./dist/*.js"
+    }
   },
   "files": [
     "dist/*",

@@ -1,5 +1,6 @@
-import parser from '@typescript-eslint/parser';
-import plugin from '@typescript-eslint/eslint-plugin';
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+const { parser, plugin } = require('./index.cjs');
 
 export {
   parser,

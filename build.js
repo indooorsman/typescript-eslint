@@ -2,28 +2,28 @@ import esbuild from 'esbuild';
 import { copyFileSync } from 'node:fs';
 
 /** @type {import('esbuild').BuildOptions} */
-const buildConfig = {
+const cjsBuildConfig = {
   entryPoints: {
-    index: './index.js'
+    index: './index.cjs'
   },
-  splitting: false,
   treeShaking: true,
-  banner: {
-    js: `import { createRequire } from 'node:module';\nimport { fileURLToPath } from 'node:url';\nconst require = createRequire(import.meta.url);\nconst __filename = fileURLToPath(import.meta.url);\nconst __dirname = fileURLToPath(new URL('.', import.meta.url));`
-  },
-  chunkNames: 'shared/[name]-[hash]',
   target: 'node18',
   platform: 'node',
-  format: 'esm',
+  format: 'cjs',
   minify: true,
   sourcemap: false,
   bundle: true,
   external: ['typescript', 'eslint', '@eslint/*', 'eslint-*'],
   write: true,
   allowOverwrite: true,
-  outdir: './dist'
+  outdir: './dist',
+  outExtension: {
+    '.js': '.cjs'
+  }
 };
-await esbuild.build(buildConfig);
+await esbuild.build(cjsBuildConfig);
 
+copyFileSync('./index.js', './dist/index.js');
 copyFileSync('./index.d.ts', './dist/index.d.ts');
 copyFileSync('./parser.js', './dist/parser.js');
+copyFileSync('./parser.cjs', './dist/parser.cjs');

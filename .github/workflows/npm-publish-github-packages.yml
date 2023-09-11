@@ -21,6 +21,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm install
       - run: npm run build
-      - run: npm publish --tag latest
+      - run: npm publish --access public --tag latest
         env:
           NODE_AUTH_TOKEN: ${{secrets.G_PACKAGE_PUBLISH}}

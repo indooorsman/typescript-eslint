@@ -1,6 +1,6 @@
 # @indooorsman/typescript-eslint
 
-This is a bundled esm pacakge of `@typescript-eslint/eslint-plugin` & `@typescript-eslint/parser`, it's super fast to be resolved & downloaded ⚡️⚡️⚡️
+This is a bundled esm package of `@typescript-eslint/eslint-plugin` & `@typescript-eslint/parser`, it's super fast to be resolved & downloaded ⚡️⚡️⚡️
 
 ## Installation
 

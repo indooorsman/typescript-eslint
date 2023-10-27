@@ -1,6 +1,6 @@
 {
   "name": "@indooorsman/typescript-eslint",
-  "version": "6.8.0",
+  "version": "6.9.0",
   "description": "This is a bundled esm package of `@typescript-eslint/eslint-plugin` & `@typescript-eslint/parser`, it's super fast to be resolved & downloaded ⚡️⚡️⚡️",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -47,9 +47,9 @@
     "typescript": "^5"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "6.8.0",
-    "@typescript-eslint/parser": "6.8.0",
-    "esbuild": "^0.19.4"
+    "@typescript-eslint/eslint-plugin": "6.9.0",
+    "@typescript-eslint/parser": "6.9.0",
+    "esbuild": "^0.19.5"
   },
   "repository": {
     "type": "git",

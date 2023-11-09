@@ -1,6 +1,6 @@
 {
   "name": "@indooorsman/typescript-eslint",
-  "version": "6.9.1",
+  "version": "6.10.0",
   "description": "This is a bundled esm package of `@typescript-eslint/eslint-plugin` & `@typescript-eslint/parser`, it's super fast to be resolved & downloaded ⚡️⚡️⚡️",
   "main": "dist/index.cjs",
   "module": "dist/index.js",

@@ -1,7 +1,4 @@
-const parser = require('@typescript-eslint/parser');
-const plugin = require('@typescript-eslint/eslint-plugin');
 
-module.exports = {
-  parser,
-  plugin
-};
+const tseslint = require('typescript-eslint');
+
+module.exports = tseslint;

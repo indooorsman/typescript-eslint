@@ -1,6 +1,6 @@
 {
   "name": "@indooorsman/typescript-eslint",
-  "version": "6.21.0",
+  "version": "7.0.2",
   "description": "This is a bundled esm package of `@typescript-eslint/eslint-plugin` & `@typescript-eslint/parser`, it's super fast to be resolved & downloaded ⚡️⚡️⚡️",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -39,20 +39,21 @@
   ],
   "author": "indooorsman@gmail.com",
   "license": "MIT",
-  "dependencies": {
-    "eslint-visitor-keys": "^3.4.3"
-  },
   "peerDependencies": {
-    "eslint": "^8.30.0",
+    "eslint": "^8.56.0",
     "typescript": "^5"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "esbuild": "^0.19.12"
+    "esbuild": "^0.20.1",
+    "typescript-eslint": "^7.0.2"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/indooorsman/typescript-eslint.git"
+  },
+  "dependencies": {
+    "eslint-visitor-keys": "^4.0.0",
+    "@eslint-community/regexpp": "^4.10.0",
+    "@eslint-community/eslint-utils": "^4.4.0"
   }
 }

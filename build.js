@@ -7,13 +7,13 @@ const cjsBuildConfig = {
     index: './index.cjs'
   },
   treeShaking: true,
-  target: 'node18',
+  target: 'node18.18.0',
   platform: 'node',
   format: 'cjs',
   minify: true,
   sourcemap: false,
   bundle: true,
-  external: ['typescript', 'eslint', '@eslint/*', 'eslint-*'],
+  external: ['typescript', 'eslint', '@eslint/*', '@eslint-community/*', 'eslint-*'],
   write: true,
   allowOverwrite: true,
   outdir: './dist',
@@ -24,6 +24,5 @@ const cjsBuildConfig = {
 await esbuild.build(cjsBuildConfig);
 
 copyFileSync('./index.js', './dist/index.js');
-copyFileSync('./index.d.ts', './dist/index.d.ts');
 copyFileSync('./parser.js', './dist/parser.js');
 copyFileSync('./parser.cjs', './dist/parser.cjs');

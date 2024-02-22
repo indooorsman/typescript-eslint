@@ -18,7 +18,7 @@ please use in new eslint config file (<https://eslint.org/docs/latest/use/config
 // eslint.config.js
 import js from '@eslint/js';
 import importPlugin from 'eslint-plugin-import';
-import { parser as tsParser, plugin as tsPlugin } from '@indooorsman/typescript-eslint';
+import { parser as tsParser, plugin as tsPlugin, configs as tslintConfigs } from '@indooorsman/typescript-eslint';
 
 export default [
   js.configs.recommended,
@@ -50,8 +50,8 @@ export default [
     },
     rules: {
       // recommended rules
-      ...tsPlugin.configs['eslint-recommended'].rules,
-      ...tsPlugin.configs.recommended.rules,
+      ...tslintConfigs.eslintRecommended.rules,
+      ...tslintConfigs.recommended.rules,
 
       // your own rules
       '@typescript-eslint/consistent-type-exports': 'error'

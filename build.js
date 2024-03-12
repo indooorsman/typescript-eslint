@@ -26,3 +26,4 @@ await esbuild.build(cjsBuildConfig);
 copyFileSync('./index.js', './dist/index.js');
 copyFileSync('./parser.js', './dist/parser.js');
 copyFileSync('./parser.cjs', './dist/parser.cjs');
+copyFileSync('./index.d.ts', './dist/index.d.ts');
